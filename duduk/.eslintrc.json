@@ -1,0 +1,103 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-typescript",
+    "react-app",
+    "prettier",
+    "next/core-web-vitals",
+    "plugin:react-svg/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+
+  "plugins": ["react", "prettier", "@typescript-eslint", "risxss", "react-svg"],
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "rules": {
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["state"]
+      }
+    ],
+    "risxss/catch-potential-xss-react": [
+      "error",
+      {
+        "trustedLibraries": ["xss"]
+      }
+    ],
+    "object-curly-spacing": ["warn", "always"],
+    "no-unused-vars": ["warn"],
+    "@typescript-eslint/semi": ["off"],
+    "@typescript-eslint/no-unused-vars": ["on"],
+    "@typescript-eslint/no-explicit-any": [
+      "error",
+      {
+        "ignoreRestArgs": true
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 200,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreComments": true
+      }
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "react/jsx-key": "error",
+    "react/no-unknown-property": [2],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.test.jsx",
+          "**/*.test.ts",
+          "**/*.test.tsx",
+          "src/tests/**/*",
+          "**/*.config.js"
+        ]
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-boolean-value": "off",
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/destructuring-assignment": "off",
+    "react/no-array-index-key": "off",
+    "react/self-closing-comp": "off",
+    "react/jsx-closing-tag-location": "off",
+    "react/no-danger": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react-svg/no-unused-ids-in-svg": 2,
+    "react-svg/no-unused-empty-tag-in-svg": 2,
+    "react-svg/no-metadata-in-svg": 2
+  }
+}

@@ -1,0 +1,4 @@
+build/*
+mocks/*
+public/*
+docs/*

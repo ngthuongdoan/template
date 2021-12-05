@@ -1,0 +1,85 @@
+import React, { useMemo } from "react";
+import { IconProps } from ".";
+
+const Seven: React.VFC<IconProps> = ({ color = "black" }) => {
+  const fill = useMemo(() => {
+    switch (color) {
+      case "black":
+        return "#030304";
+      case "white":
+        return "white";
+    }
+  }, [color]);
+  return (
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 926 926"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      xmlSpace="preserve"
+      style={{
+        fillRule: "evenodd",
+        clipRule: "evenodd",
+        strokeLinejoin: "round",
+        strokeMiterlimit: 1.41421,
+      }}
+    >
+      <g id="Artboard1" transform="matrix(1,0,0,1,-1025.05,-1101.45)">
+        <rect
+          x="1025.05"
+          y="1101.45"
+          width="925.467"
+          height="925.467"
+          style={{ fill: "none" }}
+        />
+        <g
+          id="MAGAZINE"
+          transform="matrix(8.33333,0,0,8.33333,-71979.1,-66299.5)"
+        >
+          <text
+            x="8790.92px"
+            y="8171.4px"
+            style={{
+              fontFamily: "'LucidaGrande', 'Lucida Grande', sans-serif",
+              fontWeight: 500,
+              fontSize: "7px",
+              fill,
+            }}
+          >
+            M
+            <tspan
+              x="8799.05px 8805.98px 8813.14px 8820.07px 8826.4px 8830.51px 8837.79px "
+              y="8171.4px 8171.4px 8171.4px 8171.4px 8171.4px 8171.4px 8171.4px "
+            >
+              AGAZINE
+            </tspan>
+          </text>
+        </g>
+        <g transform="matrix(8.33333,0,0,7.5,-72166.6,-59838.3)">
+          <text
+            id="SEVEN"
+            x="8783.37px"
+            y="8203.43px"
+            style={{
+              fontFamily: "'PlayfairDisplay-Regular', 'Playfair Display'",
+              fontSize: "50.3px",
+              fill,
+            }}
+          >
+            S
+            <tspan
+              x="8799.32px 8818.73px 8839.2px 8858.62px "
+              y="8203.43px 8203.43px 8203.43px 8203.43px "
+            >
+              EVEN
+            </tspan>
+          </text>
+        </g>
+      </g>
+    </svg>
+  );
+};
+
+export default Seven;
