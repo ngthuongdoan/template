@@ -1,15 +1,13 @@
-import { Icons } from "components/Icons";
+import HomePageContainer from "containers/HomePageContainer/HomePageContainer";
+import MainLayout from "layouts/MainLayout/MainLayout";
+import { NextPage } from "next";
 
-export default function Home() {
+const HomePage: NextPage = () => {
   return (
-    <div style={{ width: "100px" }}>
-      <Icons.Duduk />
-      <Icons.Haper />
-      <Icons.Kentucy />
-      <Icons.Seven />
-      <Icons.Duduk color="white" />
-      <Icons.Kentucy color="white" />
-      <Icons.Seven color="white" />
-    </div>
+    <MainLayout>
+      <HomePageContainer />
+    </MainLayout>
   );
-}
+};
+
+export default HomePage;

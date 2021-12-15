@@ -1,0 +1,10 @@
+.link {
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 16px 0;
+  color: $black-22;
+  &--is-active {
+    color: $highlight !important;
+    border-bottom: 4px solid $highlight;
+  }
+}

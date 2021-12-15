@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { IconProps } from ".";
 
-const Duduk: React.VFC<IconProps> = ({ size = 48, color = "black" }) => {
+const Duduk: React.VFC<IconProps> = ({ size = 154, color = "black" }) => {
   const fill = useMemo(() => {
     switch (color) {
       case "black":
@@ -12,8 +12,8 @@ const Duduk: React.VFC<IconProps> = ({ size = 48, color = "black" }) => {
   }, [color]);
   return (
     <svg
-      width={(size * 154) / 48}
-      height={size}
+      width={size}
+      height={(size * 48) / 154}
       viewBox="0 0 154 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

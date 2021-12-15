@@ -1,0 +1,39 @@
+.header {
+  width: 100%;
+  background: $primary;
+  padding: 0 24px 0 24px;
+  &-wrapper {
+    height: 90.4px;
+    width: 100%;
+    max-width: 1230px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 18px 35px;
+  }
+}
+.logo {
+  flex-grow: 1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.menu {
+  justify-self: flex-end;
+  &-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 32px;
+  }
+  &-items {
+    &--button {
+      background: $highlight;
+      padding: 6px 20px;
+      font-size: 15px;
+      color: $white;
+      height: 36px;
+      border-radius: 50px;
+      line-height: 24px;
+    }
+  }
+}
