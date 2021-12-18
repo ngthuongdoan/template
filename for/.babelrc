@@ -10,9 +10,5 @@
     ]
   ],
   //   "plugins": ["graphql-tag"],
-  "env": {
-    "production": {
-      "plugins": ["jsx-remove-data-test-id", "babel-plugin-styled-components"]
-    }
-  }
+  "plugins": ["jsx-remove-data-test-id", "babel-plugin-styled-components"]
 }

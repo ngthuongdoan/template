@@ -1,10 +1,17 @@
 import type { NextPage } from "next";
+import styled from "styled-components";
+import Container from "../components/Container/Container";
+import Header from "../components/Header/Header";
+
+const HomaPageStyled = styled.main``;
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <h1>Fashion Our Reality</h1>
-    </div>
+    <HomaPageStyled>
+      <Container>
+        <Header></Header>
+      </Container>
+    </HomaPageStyled>
   );
 };
 

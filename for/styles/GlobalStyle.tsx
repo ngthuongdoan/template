@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-import theme from "../config/themes";
+import themeConfig from "../config/themes";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -43,9 +43,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Apparel It';
+    font-family: ${themeConfig.fonts.Apparel};
     box-sizing: border-box;
-    background-color: ${theme.colors.primary};
+    background-color: ${themeConfig.colors.sideCar};
   }
 `;
 
