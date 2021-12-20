@@ -4,7 +4,7 @@ type SloganProps = {
 };
 
 const Slogan: React.VFC<IconProps & SloganProps> = ({
-  size = 189.437,
+  size = 165.545,
   color = "#be6c42",
   textColor = "#713c25",
 }) => {

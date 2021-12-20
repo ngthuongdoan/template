@@ -6,9 +6,10 @@ const lineHeights = [1, 1.25, 1.5];
 const radii = [0, 2, 4, 6, 8, 10];
 const space = [0, 4, 8, 16, 24, 32, 48, 64, 128, 256, 512];
 const fonts = {
-  Apparel: `Apparel, serif`,
-  ApparelIt: `Apparel It, serif`,
-  Gilroy: `Gilroy, san-serif`,
+  Apparel: `"Apparel"`,
+  ApparelIt: `"Apparel It"`,
+  ApparelDisplay: `"Apparel Display"`,
+  Gilroy: `"Gilroy"`,
 };
 
 const theme: DefaultTheme = {

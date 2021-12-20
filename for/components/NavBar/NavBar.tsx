@@ -27,6 +27,7 @@ const NavBarStyled = styled.nav`
   }
   /* Hamburger */
   svg {
+    cursor: pointer;
     margin-top: 47.5px;
   }
 `;

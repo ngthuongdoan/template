@@ -8,6 +8,7 @@ declare module "styled-components" {
     fonts: {
       Apparel: string;
       ApparelIt: string;
+      ApparelDisplay: string;
       Gilroy: string;
     };
     space: Array<number>;
