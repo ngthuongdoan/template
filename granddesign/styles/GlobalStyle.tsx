@@ -20,11 +20,14 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 600;
   }
 
-  :root, ::after, ::before {
-    font-family: 'Helvetica Neue', sans-serif;
+  *, *::after, *::before {
     box-sizing: border-box;
-    background-color: ${themeConfig.colors.white};
     color: ${themeConfig.colors.black};
+  }
+
+  body{
+    background-color: ${themeConfig.colors.white};
+    font-family: 'Helvetica Neue', sans-serif;
   }
 `;
 

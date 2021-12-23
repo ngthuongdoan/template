@@ -1,10 +1,17 @@
 // import original module declarations
-import 'styled-components';
+import "styled-components";
 
 // and extend them!
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
-    breakpoints: Array<number>;
+    breakpoints: {
+      xs: number;
+      sm: number;
+      md: number;
+      lg: number;
+      xl: number;
+      xxl: number;
+    };
 
     space: Array<number>;
     fontSizes: Array<number>;
@@ -16,5 +23,13 @@ declare module 'styled-components' {
       transparent: string;
     };
     radii: Array<number>;
+    device: {
+      xs: string;
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      xxl: string;
+    };
   }
 }

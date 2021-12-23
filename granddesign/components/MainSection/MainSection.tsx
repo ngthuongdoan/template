@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const MainSectionStyled = styled.main`
+  position: relative;
+
   h1 {
     position: relative;
     font-size: 70px;
@@ -21,17 +23,33 @@ const MainSectionStyled = styled.main`
 `;
 
 const OverlayStyled = styled.div`
-  position: absolute;
-  border: 4px solid #707070;
-  opacity: 0.05;
-  width: 1243px;
-  height: 1002px;
-  left: -56px;
+  .rect {
+    position: absolute;
+    border: 4px solid #707070;
+    opacity: 0.05;
+    &-1 {
+      width: 1243px;
+      height: 1002px;
+      left: -156px;
+    }
+    &-2 {
+      width: 868px;
+      height: 700px;
+      left: 396px;
+      top: 95px;
+    }
+    &-3 {
+      width: 1243px;
+      height: 1002px;
+      left: -367px;
+      top: 200px;
+    }
+  }
 `;
 
 const SliderStyled = styled.div`
-  position: absolute;
-  left: -100px;
+  position: relative;
+  margin-left: -100px;
   display: flex;
   gap: 20px;
   align-items: flex-end;
@@ -58,8 +76,7 @@ const SliderStyled = styled.div`
 `;
 
 const CardStyled = styled.div`
-  position: absolute;
-  top: 295px;
+  transform: translateY(-20px);
   box-sizing: border-box;
   width: 725px;
   height: 174px;
@@ -93,6 +110,11 @@ const CardStyled = styled.div`
 const MainSection = () => {
   return (
     <MainSectionStyled>
+      <OverlayStyled>
+        <div className="rect rect-1"></div>
+        <div className="rect rect-2"></div>
+        <div className="rect rect-3"></div>
+      </OverlayStyled>
       <div>
         <h1>
           Bring your dream office interiors to

@@ -1,27 +1,22 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
-import Container from "../components/Container/Container";
 import Header from "../components/Header/Header";
 import MainSection from "../components/MainSection/MainSection";
 
-const Wrapper = styled.div`
-  height: 100vh;
-`;
-
 const HomaPageStyled = styled.div`
+  position: relative;
   padding: 60px 100px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 `;
 
 const Home: NextPage = () => {
   return (
-    <Wrapper>
-      <HomaPageStyled>
-        <Container>
-          <Header />
-          <MainSection />
-        </Container>
-      </HomaPageStyled>
-    </Wrapper>
+    <HomaPageStyled>
+      <Header />
+      <MainSection />
+    </HomaPageStyled>
   );
 };
 
