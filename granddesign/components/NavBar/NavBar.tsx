@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
+import { Icons } from "../Icons";
 import Logo from "../Logo/Logo";
 
 const NavBarStyled = styled.nav`
@@ -12,13 +13,13 @@ const NavBarStyled = styled.nav`
 
   .menu {
     display: inline-flex;
-    margin-bottom: 8.5px;
-    gap: 32px;
+    margin-bottom: 0.85rem;
+    gap: 3.2rem;
 
     &-item {
       a {
         text-decoration: none;
-        font-size: 20px;
+        font-size: 2rem;
         text-transform: capitalize;
         color: ${({ theme }) => theme.colors.black};
         opacity: 0.6;
@@ -32,22 +33,22 @@ const NavBarStyled = styled.nav`
     }
   }
 
-  @media ${({ theme }) => theme.device.md} {
+  ${({ theme }) => theme.mixins.maxWidth.lg`
     .menu {
       display: none;
     }
-
+    
     .hamburger {
       display: block;
     }
-  }
+  `}
 `;
 
 const NavBar: React.VFC = () => {
   return (
     <NavBarStyled>
       <div className="hamburger">
-        <Logo></Logo>
+        <Icons.Hamburger />
       </div>
       <ul className="menu">
         <li className="menu-item">

@@ -5,10 +5,17 @@ import MainSection from "../components/MainSection/MainSection";
 
 const HomaPageStyled = styled.div`
   position: relative;
-  padding: 60px 100px;
+  padding: 6rem 10rem;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  ${({ theme }) => theme.mixins.maxWidth.lg`
+  padding: 6rem 6rem;
+  `}
+
+  ${({ theme }) => theme.mixins.maxWidth.sm`
+    padding: 1rem 2rem;
+  `}
 `;
 
 const Home: NextPage = () => {

@@ -23,13 +23,8 @@ declare module "styled-components" {
       transparent: string;
     };
     radii: Array<number>;
-    device: {
-      xs: string;
-      sm: string;
-      md: string;
-      lg: string;
-      xl: string;
-      xxl: string;
+    mixins: {
+      maxWidth: Record<"xs" | "sm" | "md" | "lg" | "xl" | "xxl", Function>;
     };
   }
 }

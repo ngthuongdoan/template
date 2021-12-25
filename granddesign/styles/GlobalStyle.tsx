@@ -25,7 +25,11 @@ const GlobalStyle = createGlobalStyle`
     color: ${themeConfig.colors.black};
   }
 
-  body{
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
     background-color: ${themeConfig.colors.white};
     font-family: 'Helvetica Neue', sans-serif;
   }

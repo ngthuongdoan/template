@@ -13,14 +13,21 @@ const breakpoints = {
   xl: 1200,
   xxl: 1400,
 };
-export const device = {
-  xs: `(max-width: ${breakpoints.xs}px)`,
-  sm: `(max-width: ${breakpoints.sm}px)`,
-  md: `(max-width: ${breakpoints.md}px)`,
-  lg: `(max-width: ${breakpoints.lg}px)`,
-  xl: `(max-width: ${breakpoints.xl}px)`,
-  xxl: `(max-width: ${breakpoints.xxl}px)`,
-};
+
+type CssParams = Parameters<typeof css>;
+const keys = Object.keys(breakpoints) as Array<keyof typeof breakpoints>;
+
+export const maxWidth = keys.reduce((accumulator, label) => {
+  // eslint-disable-next-line no-param-reassign
+  accumulator[label] = (...args: CssParams) => {
+    return css`
+      @media (max-width: ${breakpoints[label]}px) {
+        ${css(...args)};
+      }
+    `;
+  };
+  return accumulator;
+}, {} as Record<keyof typeof breakpoints, Function>);
 
 const theme: DefaultTheme = {
   breakpoints,
@@ -34,8 +41,10 @@ const theme: DefaultTheme = {
     white: "#F4F4F4",
     transparent: "transparent",
   },
-  device,
   radii,
+  mixins: {
+    maxWidth,
+  },
 };
 
 export default theme;

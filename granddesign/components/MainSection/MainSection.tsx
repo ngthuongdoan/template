@@ -5,21 +5,46 @@ const MainSectionStyled = styled.main`
 
   h1 {
     position: relative;
-    font-size: 70px;
+    font-size: 7rem;
     font-weight: 600;
-    margin-top: 125px;
-    line-height: 85px;
+    margin-top: 12.5rem;
+    line-height: 8.5rem;
+    max-width: 130rem;
   }
   h2 {
     opacity: 0.6;
-    font-size: 30px;
-    line-height: 36px;
-    margin-top: 22px;
-    margin-bottom: 67px;
+    font-size: 3rem;
+    line-height: 3.6rem;
+    margin-top: 2.2rem;
+    margin-bottom: 6.7rem;
+    max-width: 83rem;
   }
   .introduction {
     position: relative;
   }
+
+  ${({ theme }) => theme.mixins.maxWidth.lg`
+    h1 {
+      font-size: 3.2rem;
+      line-height: 4rem;
+      max-width: 55rem;
+    }
+    
+    h2 {
+      font-size:1.5rem;
+      line-height: 2rem;
+      max-width: 55rem;
+    }
+  `}
+
+  ${({ theme }) => theme.mixins.maxWidth.md`
+    h1 {
+      margin-top: 5.5rem;
+    }
+    
+    h2 {
+      margin-bottom: 3.7rem;
+    }`}
 `;
 
 const OverlayStyled = styled.div`
@@ -28,34 +53,50 @@ const OverlayStyled = styled.div`
     border: 4px solid #707070;
     opacity: 0.05;
     &-1 {
-      width: 1243px;
-      height: 1002px;
-      left: -156px;
+      width: 124.3rem;
+      height: 100.2rem;
+      left: -15.6rem;
     }
     &-2 {
-      width: 868px;
-      height: 700px;
-      left: 396px;
-      top: 95px;
+      width: 86.8rem;
+      height: 70rem;
+      left: 39.6rem;
+      top: 9.5rem;
     }
     &-3 {
-      width: 1243px;
-      height: 1002px;
-      left: -367px;
-      top: 200px;
+      width: 124.3rem;
+      height: 100.2rem;
+      left: -36.7rem;
+      top: 20rem;
     }
+
+    ${({ theme }) => theme.mixins.maxWidth.md`
+      &-1 {
+        left: -100.6rem;
+      }
+
+      &-2 {
+        left: -55.6rem;
+        top: 4.5rem;
+      }
+
+      &-3 {
+        left: -110.7rem;
+        top: 18rem;
+      }
+    `}
   }
 `;
 
 const SliderStyled = styled.div`
   position: relative;
-  margin-left: -100px;
+  margin-left: -10rem;
   display: flex;
-  gap: 20px;
+  gap: 2rem;
   align-items: flex-end;
   .slide {
-    width: 624px;
-    height: 314px;
+    width: 62.4rem;
+    height: 31.4rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -68,20 +109,34 @@ const SliderStyled = styled.div`
   }
 
   p {
-    margin-left: -5px;
-    font-size: 20px;
+    margin-left: -0.5rem;
+    font-size: 2rem;
     writing-mode: vertical-rl;
-    line-height: 24px;
+    line-height: 2.4rem;
   }
+
+  ${({ theme }) => theme.mixins.maxWidth.md`
+    gap: 1rem;
+
+    .slide{
+      width: 30.4rem;
+      height: 15.3rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
+  `}
 `;
 
 const CardStyled = styled.div`
   transform: translateY(-20px);
   box-sizing: border-box;
-  width: 725px;
-  height: 174px;
-  padding: 0 42px 0 45px;
-  box-shadow: 20px 36px 80px rgba(0, 0, 0, 0.08);
+  width: 72.5rem;
+  height: 17.4rem;
+  padding: 0 4.2rem 0 4.5rem;
+  box-shadow: 2rem 3.6rem 8rem rgba(0, 0, 0, 0.08);
   background-color: ${({ theme }) => theme.colors.white};
   display: flex;
   color: ${({ theme }) => theme.colors.black};
@@ -89,22 +144,44 @@ const CardStyled = styled.div`
   justify-content: space-between;
   h1 {
     display: inline;
-    font-size: 34px;
+    font-size: 3.4rem;
     font-weight: 600;
-    line-height: 41px;
-    margin-bottom: 19px;
+    line-height: 4rem;
+    margin-bottom: 1.9rem;
   }
   p {
-    font-size: 20px;
+    font-size: 2rem;
     opacity: 0.6;
-    line-height: 24px;
+    line-height: 2.4rem;
   }
   span {
-    font-size: 80px;
+    font-size: 8rem;
     font-weight: 500;
     opacity: 0.5;
-    line-height: 98px;
+    line-height: 9.8rem;
   }
+
+  ${({ theme }) => theme.mixins.maxWidth.md`
+    width: 30rem;
+    height: 7.2rem;
+    padding: 0 1.2rem 0 1.5rem;
+    
+    h1 {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
+
+    span{
+      font-size: 4rem;
+      line-height: 4.4rem;
+    }
+  `}
 `;
 
 const MainSection = () => {
@@ -117,14 +194,12 @@ const MainSection = () => {
       </OverlayStyled>
       <div>
         <h1>
-          Bring your dream office interiors to
-          <br />
-          Life with our design expertise
+          Bring your dream office interiors to Life with our design expertise
         </h1>
         <h2>
-          Complete the designs with painting, flooring and <br />
-          other decor solutions. Move in with ease, with our hassle-free <br />
-          civil work and installation services.
+          Complete the designs with painting, flooring and <br /> other decor
+          solutions. Move in with ease, with our hassle-free civil work and
+          installation services.
         </h2>
       </div>
       <div className="introduction">
