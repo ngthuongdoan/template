@@ -11,7 +11,7 @@ const HeaderStyled = styled.header`
 
 const Header: React.VFC = () => {
   return (
-    <HeaderStyled>
+    <HeaderStyled role="navigation">
       <Logo />
       <NavBar />
     </HeaderStyled>

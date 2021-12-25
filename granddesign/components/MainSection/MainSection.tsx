@@ -192,8 +192,8 @@ const MainSection = () => {
         <div className="rect rect-2"></div>
         <div className="rect rect-3"></div>
       </OverlayStyled>
-      <div>
-        <h1>
+      <div role="contentinfo">
+        <h1 role="heading">
           Bring your dream office interiors to Life with our design expertise
         </h1>
         <h2>

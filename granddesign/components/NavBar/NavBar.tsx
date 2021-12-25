@@ -45,21 +45,21 @@ const NavBarStyled = styled.nav`
 
 const NavBar: React.VFC = () => {
   return (
-    <NavBarStyled>
-      <div className="hamburger">
+    <NavBarStyled role="menubar">
+      <div className="hamburger" role="menuitem">
         <Icons.Hamburger />
       </div>
-      <ul className="menu">
-        <li className="menu-item">
+      <ul className="menu" role="menu">
+        <li className="menu-item" role="menuitem">
           <Link href="#collection">Home</Link>
         </li>
-        <li className="menu-item">
+        <li className="menu-item" role="menuitem">
           <Link href="#lookbook">Our Projects</Link>
         </li>
-        <li className="menu-item">
+        <li className="menu-item" role="menuitem">
           <Link href="#about">About Us</Link>
         </li>
-        <li className="menu-item">
+        <li className="menu-item" role="menuitem">
           <Link href="#contact">Contact</Link>
         </li>
       </ul>
