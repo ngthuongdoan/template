@@ -1,7 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
 import { Icons } from "../Icons";
-import Logo from "../Logo/Logo";
 
 const NavBarStyled = styled.nav`
   display: flex;

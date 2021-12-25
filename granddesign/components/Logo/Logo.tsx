@@ -1,3 +1,4 @@
+import { memo } from "react";
 import styled from "styled-components";
 
 const LogoStyled = styled.div`
@@ -25,4 +26,4 @@ const Logo: React.VFC = () => {
     </LogoStyled>
   );
 };
-export default Logo;
+export default memo(Logo);

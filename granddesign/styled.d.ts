@@ -13,16 +13,11 @@ declare module "styled-components" {
       xxl: number;
     };
 
-    space: Array<number>;
-    fontSizes: Array<number>;
-    fontWeights: Array<number>;
-    lineHeights: Array<number>;
     colors: {
       black: string;
       white: string;
       transparent: string;
     };
-    radii: Array<number>;
     mixins: {
       maxWidth: Record<"xs" | "sm" | "md" | "lg" | "xl" | "xxl", Function>;
     };

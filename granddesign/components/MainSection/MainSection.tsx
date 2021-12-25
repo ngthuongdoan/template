@@ -101,10 +101,10 @@ const SliderStyled = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     &-1 {
-      background-image: url(images/1.png);
+      background-image: url(images/1.webp);
     }
     &-2 {
-      background-image: url(images/2.png);
+      background-image: url(images/2.webp);
     }
   }
 

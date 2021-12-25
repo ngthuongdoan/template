@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 const Hamburger = ({ size = 24 }) => {
   return (
     <svg
@@ -11,4 +13,4 @@ const Hamburger = ({ size = 24 }) => {
   );
 };
 
-export default Hamburger;
+export default memo(Hamburger);
