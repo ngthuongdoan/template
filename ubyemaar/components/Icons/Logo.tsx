@@ -1,4 +1,3 @@
-import { memo } from "react";
 import { IconProps } from ".";
 
 const Logo: React.VFC<IconProps> = ({ size = 58 }) => {

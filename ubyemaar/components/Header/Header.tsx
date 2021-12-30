@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Icons } from "../Icons";
-import Logo from "../Logo/Logo";
 import NavBar from "../NavBar/NavBar";
 
 const HeaderStyled = styled.header`
