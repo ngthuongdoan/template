@@ -1,0 +1,14 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        // This tells the preset to look for browserslist in package.json
+        // See: https://babeljs.io/docs/en/babel-preset-env#browserslist-integration
+        "useBuiltIns": "entry"
+      }
+    ]
+  ],
+  //   "plugins": ["graphql-tag"],
+  "plugins": ["jsx-remove-data-test-id", "babel-plugin-styled-components"]
+}
