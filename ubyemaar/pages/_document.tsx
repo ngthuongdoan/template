@@ -74,7 +74,6 @@ class MyDocument extends Document {
             name="description"
             content="THE MOST REWARDING LOYALTY PROGRAM IN THE REGION."
           />
-
           {/* <!-- Open Graph / Facebook --> */}
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ubyemaar.netlify.app/" />
@@ -84,7 +83,6 @@ class MyDocument extends Document {
             content="THE MOST REWARDING LOYALTY PROGRAM IN THE REGION."
           />
           <meta property="og:image" content="/base-image.png" />
-
           {/* <!-- Twitter --> */}
           <meta property="twitter:card" content="summary_large_image" />
           <meta
@@ -105,6 +103,10 @@ class MyDocument extends Document {
           />
           <link
             href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+            rel="stylesheet"
+          ></link>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap"
             rel="stylesheet"
           ></link>
         </Head>

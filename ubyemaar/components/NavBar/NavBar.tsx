@@ -1,38 +1,36 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { Icons } from "../Icons";
 
 const NavBarStyled = styled.nav`
   display: flex;
-  .hamburger {
-    width: 100%;
-    height: 100%;
-    display: none;
-  }
 
   .menu {
     display: inline-flex;
-    margin-bottom: 0.85rem;
-    gap: 3.2rem;
+    margin-bottom: 0.75rem;
+    gap: 6.4rem;
 
     &-item {
       a {
         text-decoration: none;
-        font-size: 2rem;
-        text-transform: capitalize;
-        color: ${({ theme }) => theme.colors.black};
-        opacity: 0.6;
+        font-size: 1.1rem;
+        font-weight: 500;
+        line-height: 1.7rem;
+        text-transform: uppercase;
+        color: ${({ theme }) => theme.colors.silver};
+        &.active {
+          color: ${({ theme }) => theme.colors.black};
+        }
       }
 
       &:hover {
         a {
-          opacity: 1;
+          color: ${({ theme }) => theme.colors.black};
         }
       }
     }
   }
 
-  ${({ theme }) => theme.mixins.maxWidth.lg`
+  /* ${({ theme }) => theme.mixins.maxWidth.lg`
     .menu {
       display: none;
     }
@@ -40,27 +38,27 @@ const NavBarStyled = styled.nav`
     .hamburger {
       display: block;
     }
-  `}
+  `} */
 `;
 
 const NavBar: React.VFC = () => {
   return (
     <NavBarStyled role="menubar">
-      <div className="hamburger" role="menuitem">
-        <Icons.Hamburger />
-      </div>
       <ul className="menu" role="menu">
         <li className="menu-item" role="menuitem">
           <Link href="#collection">Home</Link>
         </li>
         <li className="menu-item" role="menuitem">
-          <Link href="#lookbook">Our Projects</Link>
+          <Link href="#lookbook">Earn & Redeem</Link>
         </li>
         <li className="menu-item" role="menuitem">
-          <Link href="#about">About Us</Link>
+          <Link href="#about">Tier Benefits</Link>
         </li>
         <li className="menu-item" role="menuitem">
-          <Link href="#contact">Contact</Link>
+          <Link href="#contact">Your partners</Link>
+        </li>
+        <li className="menu-item" role="menuitem">
+          <Link href="#contact">Join u by emaar</Link>
         </li>
       </ul>
     </NavBarStyled>

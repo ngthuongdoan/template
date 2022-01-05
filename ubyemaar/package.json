@@ -21,7 +21,7 @@
     "@netlify/plugin-nextjs": "^4.1.1",
     "@types/node": "16.11.13",
     "@types/react": "17.0.37",
-    "@types/styled-components": "^5.1.18",
+    "@types/styled-components": "^5.1.19",
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
     "babel-plugin-styled-components": "^2.0.2",
     "eslint": "^8.4.1",

@@ -17,6 +17,16 @@ declare module "styled-components" {
       black: string;
       white: string;
       transparent: string;
+      silver: string;
+      dune: string;
+      silverChalice: string;
+      alabaster: string;
+      gallery: string;
+    };
+    fonts: {
+      Poppins: string;
+      BarlowCondensed: string;
+      Rajdhani: string;
     };
     mixins: {
       maxWidth: Record<"xs" | "sm" | "md" | "lg" | "xl" | "xxl", Function>;

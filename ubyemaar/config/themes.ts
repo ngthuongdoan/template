@@ -26,9 +26,19 @@ export const maxWidth = keys.reduce((accumulator, label) => {
 const theme: DefaultTheme = {
   breakpoints,
   colors: {
-    black: "#333333",
-    white: "#F4F4F4",
+    black: "#000000",
+    white: "#FFFFFF",
     transparent: "transparent",
+    silver: "#BCBCBC",
+    dune: "#2D2926",
+    silverChalice: "#AFAFAF",
+    alabaster: "#FAFAFA",
+    gallery: "#EFEFEF",
+  },
+  fonts: {
+    Poppins: "'Poppins', sans-serif",
+    BarlowCondensed: "'Barlow Condensed', sans-serif",
+    Rajdhani: "'Rajdhani', sans-serif",
   },
   mixins: {
     maxWidth,

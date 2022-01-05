@@ -1,3 +1,4 @@
+import Button from "components/Button/Button";
 import { NextPage } from "next";
 import { Icons } from "../components/Icons";
 
@@ -17,6 +18,8 @@ const DemoPage: NextPage = () => {
       <Icons.RightArrow />
       <Icons.Search />
       <Icons.Twitter />
+      <Button>Test 1</Button>
+      <Button.CTA>JOIN NOW</Button.CTA>
     </div>
   );
 };
