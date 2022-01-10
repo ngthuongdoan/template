@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { useRef } from "react";
-import { gsap } from "gsap";
 
 type SliderProps = {
   total: number;
@@ -8,7 +6,7 @@ type SliderProps = {
   onNext(): void;
 };
 
-const SliderStyled = styled.div<SliderProps>`
+const SliderStyled = styled.div<Omit<SliderProps, "onNext">>`
   font-size: 1.2rem;
   letter-spacing: 0.48rem;
   display: inline-flex;
@@ -57,14 +55,6 @@ const SliderStyled = styled.div<SliderProps>`
 
 const Slider: React.VFC<SliderProps> = (props) => {
   const { total, current, onNext } = props;
-  const currentSlideRef = useRef<HTMLParagraphElement>(null);
-
-  // const fadeOutEffect = gsap.to(currentSlideRef.current, {
-  //   y: 20,
-  //   opacity: 0,
-  //   duration: 1,
-  //   overwrite: true,
-  // });
 
   function zeroPad(num: number, places: number) {
     var zero = places - num.toString().length + 1;
@@ -73,20 +63,17 @@ const Slider: React.VFC<SliderProps> = (props) => {
 
   function onNextHandler() {
     onNext();
-    // fadeOutEffect.play();
   }
   return (
     <SliderStyled {...props}>
       <span className="slider-dash"></span>
-      <span className="slider-next" onClick={onNextHandler}>
+      <div className="slider-next" onClick={onNextHandler}>
         NEXT SLIDE
-      </span>
+      </div>
       <span className="slider-progress"></span>
       <div className="slider-indicate">
-        <p className="slider-indicate-current" ref={currentSlideRef}>
-          {zeroPad(current, 2)}
-        </p>
-        /<p className="slider-indicate-total">{zeroPad(total, 2)}</p>
+        <p className="slider-indicate-current">{zeroPad(current, 2)}</p>/
+        <p className="slider-indicate-total">{zeroPad(total, 2)}</p>
       </div>
     </SliderStyled>
   );

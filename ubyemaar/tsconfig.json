@@ -3,6 +3,7 @@
     "target": "es5",
     "baseUrl": ".",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "typeRoots": ["./@types"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -16,6 +17,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["@types/next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

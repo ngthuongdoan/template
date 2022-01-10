@@ -18,6 +18,11 @@ const DemoPage: NextPage = () => {
       <Icons.RightArrow />
       <Icons.Search />
       <Icons.Twitter />
+      <Icons.Stay />
+
+      <Icons.Dish />
+      <Icons.Play />
+
       <Button>Test 1</Button>
       <Button.CTA>JOIN NOW</Button.CTA>
     </div>
