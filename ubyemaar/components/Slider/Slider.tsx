@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useRef } from "react";
+import { gsap } from "gsap";
 
 type SliderProps = {
   total: number;
@@ -12,6 +14,7 @@ const SliderStyled = styled.div<SliderProps>`
   display: inline-flex;
   align-items: center;
   margin-left: 5.27rem;
+  color: ${({ theme }) => theme.colors.dune};
   .slider {
     &-dash {
       width: 9.41px;
@@ -20,7 +23,6 @@ const SliderStyled = styled.div<SliderProps>`
       margin-right: 2.15rem;
     }
     &-next {
-      color: ${({ theme }) => theme.colors.dune};
       text-transform: uppercase;
       line-height: 1.7rem;
       cursor: pointer;
@@ -42,31 +44,50 @@ const SliderStyled = styled.div<SliderProps>`
       }
     }
     &-indicate {
-      color: ${({ theme }) => theme.colors.dune};
+      position: relative;
       font-weight: 600;
       font-family: ${({ theme }) => theme.fonts.Rajdhani};
       font-size: 1.2rem;
+      & > p {
+        display: inline-block;
+      }
     }
   }
 `;
 
 const Slider: React.VFC<SliderProps> = (props) => {
   const { total, current, onNext } = props;
+  const currentSlideRef = useRef<HTMLParagraphElement>(null);
+
+  // const fadeOutEffect = gsap.to(currentSlideRef.current, {
+  //   y: 20,
+  //   opacity: 0,
+  //   duration: 1,
+  //   overwrite: true,
+  // });
 
   function zeroPad(num: number, places: number) {
     var zero = places - num.toString().length + 1;
     return Array(+(zero > 0 && zero)).join("0") + num;
   }
+
+  function onNextHandler() {
+    onNext();
+    // fadeOutEffect.play();
+  }
   return (
     <SliderStyled {...props}>
       <span className="slider-dash"></span>
-      <span className="slider-next" onClick={onNext}>
+      <span className="slider-next" onClick={onNextHandler}>
         NEXT SLIDE
       </span>
       <span className="slider-progress"></span>
-      <span className="slider-indicate">
-        {zeroPad(current, 2)}/{zeroPad(total, 2)}
-      </span>
+      <div className="slider-indicate">
+        <p className="slider-indicate-current" ref={currentSlideRef}>
+          {zeroPad(current, 2)}
+        </p>
+        /<p className="slider-indicate-total">{zeroPad(total, 2)}</p>
+      </div>
     </SliderStyled>
   );
 };
